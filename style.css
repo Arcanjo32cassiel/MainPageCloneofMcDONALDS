@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;700&display=swap');
-:root {
+ :root {
     --primary-color: #f0c43f;
 }
 
@@ -11,8 +11,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    width: 100vw;
-    height: 100%;
+    /* width: 100vw; */
+    /* height: 100%; */
 }
 
 li {
@@ -25,28 +25,19 @@ a {
 
 header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     background-color: #e7e2eb;
     padding: 0 2rem;
     border-top: 3px solid #f0c43f;
     width: 100%;
     height: 4rem;
+    position: relative;
 }
 
-
-/* header .mcdonalds-logo { */
-
-
-/* position: absolute; */
-
-
-/* z-index: 2000; */
-
-
-/* top: 2px; */
-
-
-/* } */
+.mcdonalds-logo {
+    margin-top: 2.2rem;
+}
 
 .menu ul {
     display: flex;
@@ -86,4 +77,174 @@ header {
 
 .menu>ul #noqueue a img {
     height: 3rem;
+}
+
+.banner {
+    background: url('https://d25dk4h1q4vl9b.cloudfront.net/bundles/common/header-home-v2--br.jpg') no-repeat center center;
+    height: 16rem;
+    width: 100vw;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    /* transform: ; */
+}
+
+.pill-home-v1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fundos-bg {
+    background: url('./images/bgtoday.jpeg') no-repeat;
+    background-size: 100% auto;
+    padding-top: 2em;
+    /* height: 1; */
+    z-index: 3;
+}
+
+.pill-home-v1 h1 {
+    /* position: absolute;
+    top: 3rem; */
+    font-size: 3rem;
+    color: #404140;
+}
+
+
+/* .todaymcdonalds {} */
+
+.todaymcdonalds .cards {
+    width: 88%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    margin-top: 5rem;
+}
+
+.todaymcdonalds .card {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .9rem;
+    position: relative;
+    /* justify-content: space-between; */
+}
+
+.todaymcdonalds .card .borderbotton {
+    height: .7rem;
+    width: 100%;
+    margin-top: .8rem;
+    background-color: #333;
+}
+
+.todaymcdonalds .card:hover .borderbotton {
+    background-color: rgb(255, 198, 43);
+}
+
+.todaymcdonalds .card .borderright {
+    height: 300px;
+    border-right: 2px solid #d6d6d6;
+    position: absolute;
+    right: 0.001rem;
+}
+
+.todaymcdonalds .card .img {
+    box-shadow: 0 6px 20px 0 #33333398;
+    border: 1px solid #dadbdb;
+}
+
+.todaymcdonalds .card .img img {
+    width: 100%;
+}
+
+.todaymcdonalds .card h3 {
+    text-align: center;
+    margin-top: 1.8rem;
+    margin-bottom: .9rem;
+}
+
+.todaymcdonalds .card span {
+    text-align: center;
+    /* padding: .6rem; */
+}
+
+@media (max-width: 767px) {
+    .todaymcdonalds .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .todaymcdonalds .card {
+        width: 100%;
+    }
+    .todaymcdonalds .card .borderright {
+        height: 0;
+        border-right: none;
+        position: initial;
+        right: 0;
+        display: none;
+    }
+}
+
+@media (max-width:991px) {
+    .menu {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .btn-menu-mobile {
+        /* background: rgb(224, 63, 63); */
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 0.3rem;
+        z-index: 3;
+        cursor: pointer;
+    }
+    .btn-menu-mobile .line1 {
+        position: relative;
+        display: block;
+        height: 3px;
+        width: 20px;
+        background-color: #000000;
+        top: 20px;
+        /* left: 7px; */
+        margin: 0 auto;
+        transition: 0.5s ease-in-out;
+    }
+    .btn-menu-mobile .line1:before,
+    .btn-menu-mobile .line1:after {
+        background-color: #000000;
+        content: ' ';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: 0.5s ease-in-out;
+    }
+    .btn-menu-mobile .line1:before {
+        top: .35rem;
+    }
+    .btn-menu-mobile .line1:after {
+        bottom: .3rem;
+    }
+    .btn-menu-mobile.active .line1 {
+        transform: rotate(45deg);
+    }
+    .btn-menu-mobile.active .line1:before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+    .btn-menu-mobile.active .line1:after {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .mcdonalds-logo {
+        margin-left: -2rem;
+    }
 }
