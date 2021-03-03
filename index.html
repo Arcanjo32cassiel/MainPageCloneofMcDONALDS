@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> McDonald's - Brasil </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/flaticon.svg" type="image/x-icon">
 </head>
 
 <body>
@@ -33,6 +34,24 @@
             <div class="line1"></div>
         </div>
     </header>
+    <nav class="menu-mobile ">
+        <ul class="">
+            <li><a href="#">Cardápio</a></li>
+            <li><a href="#">Endereços</a></li>
+            <li><a href="#">Em família</a></li>
+            <li><a href="#">Quem Somos</a></li>
+            <li id="giftcard">
+                <a href="#"><img src="https://d25dk4h1q4vl9b.cloudfront.net/bundles/front/media/images/submenu/giftcard-icon@48.png" alt="">Gift Card</a>
+            </li>
+            <li id="mcdelivery">
+                <a href="#"><img src="https://d25dk4h1q4vl9b.cloudfront.net/bundles/front/media/images/submenu/mcdelivery_menu_v3.png" alt=""></a>
+            </li>
+            <li id="noqueue">
+                <a href="#"><img src="https://d25dk4h1q4vl9b.cloudfront.net/bundles/front/media/images/submenu/mequi_sem_fila.png" alt=""></a>
+            </li>
+        </ul>
+    </nav>
+
     <main class="cotainer">
 
         <div class="banner"></div>
@@ -156,7 +175,8 @@
     </main>
     <script>
         function change() {
-            document.querySelector('.btn-menu-mobile').classList.toggle('active')
+            document.querySelector('.btn-menu-mobile').classList.toggle('active');
+            document.querySelector('.menu-mobile').classList.toggle('active-menu')
         }
     </script>
 </body>

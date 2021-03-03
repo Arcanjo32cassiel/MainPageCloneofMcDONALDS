@@ -107,8 +107,11 @@ header {
 .pill-home-v1 h1 {
     /* position: absolute;
     top: 3rem; */
-    font-size: 3rem;
+    /* font-size:3vw;  */
+    /* font-size: calc(1em + 3vw); */
+    font-size: clamp(1.75rem, 1em + 3vw, 2.5rem);
     color: #404140;
+    text-align: center;
 }
 
 
@@ -172,7 +175,20 @@ header {
     /* padding: .6rem; */
 }
 
+.menu-mobile {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
 @media (max-width: 767px) {
+    .mcdonalds-logo {
+        margin-top: 0.2rem;
+        height: 64px;
+    }
+    .mcdonalds-logo img {
+        height: 62px;
+    }
     .todaymcdonalds .cards {
         display: flex;
         flex-direction: column;
@@ -246,5 +262,40 @@ header {
     }
     .mcdonalds-logo {
         margin-left: -2rem;
+    }
+    header {
+        border-bottom: 1px solid #7b7b7b;
+    }
+    .menu-mobile.active-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        /* background: linear-gradient(to bottom, rgba(241, 244, 246, 1) 0, rgba(234, 234, 234, 1) 50%, rgba(255, 255, 255, 1) 100%) */
+    }
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-mobile ul li {
+        background: linear-gradient(to bottom, #fff 0, #e5e5e5 50%, #fefefe 100%);
+        padding: .8rem;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+    .menu-mobile ul li a {
+        color: #414141;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .menu-mobile ul #giftcard img {
+        height: 1.2rem;
+    }
+    .menu-mobile ul #noqueue img {
+        height: 1.2rem;
     }
 }
